@@ -1,4 +1,5 @@
 import './Navigation.css'
+import { Link } from 'react-router-dom'
 
 function Navigation() {
   return (
@@ -9,8 +10,8 @@ function Navigation() {
       </form>
 
       <div className="nav__actions">
-        <button className="nav__action" type="button">Pokédex</button>
-        <button className="nav__action" type="button">Favoritos</button>
+        <Link className="nav__action" to="/pokedex">Pokédex</Link>
+        <Link className="nav__action" to="/favorites">Favoritos</Link>
       </div>
     </nav>
   )
