@@ -1,0 +1,252 @@
+.team__trainer {
+width: 100%;
+box-sizing: border-box;
+padding: 18px 16px 28px;
+color: #EAFBFF;
+}
+
+.team__trainer-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team__trainer-card {
+width: 100%;
+height: auto;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+padding: 14px 14px;
+border-radius: 16px;
+background: linear-gradient(
+    180deg,
+    rgba(90, 24, 154, 0.35),
+    rgba(30, 0, 50, 0.92)
+);
+border: 1px solid rgba(242, 5, 203, 0.45);
+box-shadow:
+    0 0 22px rgba(242, 5, 203, 0.18),
+    0 0 38px rgba(5, 242, 219, 0.10);
+}
+
+.team__trainer-avatar {
+width: 100px;
+height: 100px;
+margin-bottom: 15px;
+border-radius: 999px;
+flex: 0 0 auto;
+--trainer-avatar: none;
+background-image:
+    var(--trainer-avatar),
+    url("/images/avatar-user.png"),
+    radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 228, 75, 0.95),
+    rgba(242, 5, 203, 0.35)
+    );
+
+border: 1px solid rgba(255, 228, 75, 0.55);
+box-shadow:
+    0 0 12px rgba(255, 228, 75, 0.20),
+    0 0 18px rgba(242, 5, 203, 0.16);
+cursor: pointer;
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.team__trainer-name {
+margin: 0;
+font-size: 18px;
+font-weight: 900;
+letter-spacing: 0.2px;
+color: #EAFBFF;
+text-shadow: 0 0 10px rgba(242, 5, 203, 0.14);
+}
+
+.team__trainer-description {
+margin: 6px 0 0;
+font-size: 13px;
+opacity: 0.88;
+color: rgba(234, 251, 255, 0.9);
+}
+
+.team__cards {
+cursor: pointer;
+}
+
+.team__slot {
+width: 282px;
+min-height: 140px;
+border-radius: 18px;
+box-sizing: border-box;
+}
+
+.team__slot-empty {
+width: 282px;
+  height: 370px;
+  border-radius: 18px;
+  cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+cursor: pointer;
+background: linear-gradient(
+    180deg,
+    rgba(90, 24, 154, 0.35),
+    rgba(30, 0, 50, 0.92)
+);
+border: 1px solid rgba(242, 5, 203, 0.45);
+box-shadow:
+    0 0 22px rgba(242, 5, 203, 0.14),
+    0 0 38px rgba(5, 242, 219, 0.10);
+}
+
+.team__plus {
+width: 52px;
+height: 52px;
+border-radius: 999px;
+display: grid;
+place-items: center;
+font-size: 34px;
+font-weight: 900;
+color: #FFE44B;
+background: rgba(0, 0, 0, 0.25);
+border: 1px solid rgba(5, 242, 219, 0.55);
+box-shadow:
+    0 0 14px rgba(5, 242, 219, 0.16),
+    0 0 18px rgba(242, 5, 203, 0.12);
+}
+
+.team__slot-empty:hover,
+.team__trainer-avatar:hover,
+.team__trainer-btn-perfil:hover,
+.team__trainer-btn-pokedex-image:hover {
+border-color: rgba(255, 228, 75, 0.75);
+box-shadow:
+    0 0 18px rgba(255, 228, 75, 0.18),
+    0 0 28px rgba(242, 5, 203, 0.16);
+transform: translateY(-4px);
+}
+
+.team__slot-empty:hover .team__plus {
+box-shadow:
+    0 0 18px rgba(5, 242, 219, 0.22),
+    0 0 24px rgba(242, 5, 203, 0.16);
+}
+
+.team__slot-empty:focus-visible {
+outline: none;
+box-shadow:
+    0 0 0 3px rgba(5, 242, 219, 0.22),
+    0 0 18px rgba(255, 228, 75, 0.16);
+}
+
+.team__trainer-btn-perfil {
+width: 100px;
+height: 52px;
+border-radius: 999px;
+display: grid;
+place-items: center;
+font-size: 34px;
+color: #FFE44B;
+background: rgba(0, 0, 0, 0.25);
+border: 1px solid rgba(5, 242, 219, 0.55);
+box-shadow:
+    0 0 14px rgba(5, 242, 219, 0.16),
+    0 0 18px rgba(242, 5, 203, 0.12);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+.team__trainer-btn-pokedex{
+display: grid;
+place-items: center;
+cursor: pointer;
+}
+
+.team__trainer-btn-pokedex-image {
+  width: 70px;
+  height: 57px;
+  object-fit: contain;
+}
+
+.team__cards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.team__slot {
+  width: 282px;
+}
+
+@media screen and (min-width: 700px) {
+.team__trainer {
+    padding: 22px 22px 34px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.team__trainer-perfil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.team__trainer-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 130px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    margin-left: 20px;
+}
+
+.team__cards {
+margin-top: 16px;
+max-width: 980px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.team__cards-list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.team__slot {
+width: 282px;
+flex: 0 0 282px; 
+box-sizing: border-box;
+min-height: 180px;
+}
+
+.team__trainer-btn-perfil{
+    width: 100px;
+}
+
+.team__trainer-btn-block {
+    display: flex;
+    flex-direction: row;
+}
+}

@@ -1,0 +1,155 @@
+.content {
+  margin: auto;
+  display: block;
+  background-color: transparent;
+}
+
+
+.profile {
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 18px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+  color: #EAFBFF;
+}
+
+.profile__content{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.profile__search {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile__search-input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(5, 242, 219, 0.55);
+  background: rgba(0, 0, 0, 0.25);
+  color: #EAFBFF;
+  outline: none;
+  box-shadow:
+    0 0 14px rgba(5, 242, 219, 0.16),
+    0 0 18px rgba(242, 5, 203, 0.12);
+}
+
+.profile__search-input::placeholder {
+  color: rgba(234, 251, 255, 0.65);
+}
+
+.profile__search-button {
+  flex: 0 0 auto;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(242, 5, 203, 0.45);
+  background: rgba(0, 0, 0, 0.25);
+  color: #EAFBFF;
+  cursor: pointer;
+  box-shadow:
+    0 0 14px rgba(5, 242, 219, 0.16),
+    0 0 18px rgba(242, 5, 203, 0.12);
+
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.profile__search-button:hover {
+  border-color: rgba(255, 228, 75, 0.75);
+  box-shadow:
+    0 0 18px rgba(255, 228, 75, 0.18),
+    0 0 28px rgba(242, 5, 203, 0.16);
+  transform: translateY(-4px);
+}
+
+
+.profile__actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.profile__action-button {
+  flex: 1;
+  min-width: 140px;
+  max-width: 220px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(5, 242, 219, 0.55);
+  background: rgba(0, 0, 0, 0.25);
+  color: #EAFBFF;
+  cursor: pointer;
+  box-shadow:
+    0 0 14px rgba(5, 242, 219, 0.16),
+    0 0 18px rgba(242, 5, 203, 0.12);
+transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+
+ /* ESTILOS PARA LINK MY TEAM */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-decoration: none; 
+  padding: 0 18px;  
+  line-height: 1;
+}
+
+.profile__action-button:hover {
+  border-color: rgba(255, 228, 75, 0.75);
+  box-shadow:
+    0 0 18px rgba(255, 228, 75, 0.18),
+    0 0 28px rgba(242, 5, 203, 0.16);
+  transform: translateY(-4px);
+}
+
+
+@media screen and (min-width: 700px) {
+  .profile {
+    padding: 22px 22px 16px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .profile__content {
+    max-width: 980px;
+    width: 100%;
+    
+  }
+
+  .profile__search {
+    max-width: 750px;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  .profile__search-button {
+    max-width: 100px;
+  }
+
+  .profile__actions {
+    margin-top: 14px;
+    gap: 18px;
+    justify-content: center;
+  }
+}
