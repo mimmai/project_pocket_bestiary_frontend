@@ -16,4 +16,6 @@ Este proyecto esta enfocado en JSX, componentes reutilizables y conexión a una 
 - Preloader visible durante las solicitudes
 - Popups reutilizables
 - Agregar Pokémon a un team
-- Diseño responsive
+- Diseño responsivo
+
+Proyecto listo para revision
