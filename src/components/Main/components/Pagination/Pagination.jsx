@@ -1,3 +1,6 @@
+import './Pagination.css'
+
+
 export default function Pagination({ page, totalPages, onChange }) {
     if (!totalPages || totalPages <= 1) return null;
 

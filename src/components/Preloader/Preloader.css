@@ -1,0 +1,22 @@
+.preloader {
+    width: 100%;
+    min-height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(10, 0, 20, 0.85);
+    z-index: 9999;
+}
