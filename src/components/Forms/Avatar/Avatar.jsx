@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import './Avatar.css'
+import '../../Form/Form.css'
 
 export default function AvatarPopup({ onUpdateAvatar }) {
   const avatarRef = useRef(null);

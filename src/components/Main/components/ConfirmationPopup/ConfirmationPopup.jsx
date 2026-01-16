@@ -1,3 +1,6 @@
+import './ConfirmationPopup.css'
+import '../../../Form/Form.css'
+
 export default function ConfirmationPopup({
     title = "Confirmación",
     message = "¿Deseas continuar?",

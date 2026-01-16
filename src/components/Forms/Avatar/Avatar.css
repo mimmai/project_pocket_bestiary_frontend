@@ -1,0 +1,28 @@
+/* AvatarPopup específico */
+
+.form__avatar {
+  height: 250px;
+}
+
+.form__input-avatar {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.form__button-avatar {
+  margin: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .form__avatar {
+    height: 260px;
+  }
+
+  .form__input-avatar {
+    margin-bottom: 30px;
+  }
+
+  .form__button-avatar {
+    margin: 0;
+  }
+}

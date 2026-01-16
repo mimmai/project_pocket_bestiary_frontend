@@ -1,6 +1,5 @@
-
-//import { useContext } from "react";
-//import CurrentUserContext from "../../../../../contexts/CurrentUserContext";
+import './Card.css'
+import '../../../Form/Form.css'
 
 export default function Card({ 
     card, 
@@ -12,28 +11,6 @@ export default function Card({
 
         console.log("✅ Card.jsx correcto renderizado");
     const { name, link } = card;
-
-    //ESTO DESESTRUCTURA CURRENTUSER DEL CONTEXTO
-    //const { currentUser } = useContext(CurrentUserContext)
-    //console.log('currentUser:', currentUser)
-
-    //PARA VERIFICAR QUE EL USARIO ES DUEÑO DE LA TARJETA?
-   //const isOwn = card?.owner?._id === currentUser?._id;
-
-
-    //ESTE MUESTRA EL BOTON ELIMINAR SOLO SI ES EL DUEÑO
-   // const cardDeleteButtonClassName = `card__trash-button ${
-     //   isOwn ? 'card__trash-button-visible': 'card__trash-button_hidden'
-    //}`  
-    
-   // const isLiked = (typeof card.isLiked !== 'undefined')
- // ? card.isLiked
- // : (currentUser && card.likes ? card.likes.some(user => user._id === currentUser._id) : false);
-    
-
-  //  const _cardLikeButtonClassName = `card__like-button ${
-  //  isLiked ? 'card__like-button-active' : ''
-//}`; 
 
     function _handleLikeCLick() {
         console.log('Card.jsx -> click', card._id, 'prop card.isLiked =', card.isLiked);
@@ -67,7 +44,6 @@ export default function Card({
         : String(mainAbility).replaceAll("-", " ");
 
     const handlePokeball = () => {
-    // Si aún no conectas el handler desde la API/estado, no rompe
     if (typeof onPokeballClick === "function") {
         onPokeballClick(card);
     } else {
@@ -76,7 +52,7 @@ export default function Card({
     };
 
     return (
-    <li className="card">
+    <article className="card">
         <img
         className="card__image"
         src={link}
@@ -98,7 +74,7 @@ export default function Card({
             ))}
         </div>
 
-        {/* STATS EN CUADRADITOS (2 POR FILA) */}
+        {/* STATS EN CUADRADITOS*/}
         <div className="card__stats">
             <div className="card__stat">
             <span className="card__stat-value">
@@ -161,20 +137,6 @@ export default function Card({
             </button>
         </div>
         </div>
-    </li>
+    </article>
     );
 }
-
-/*<div className="card__description">
-                <button 
-                aria-label='Like card'
-                className={cardLikeButtonClassName}
-                onClick={handleLikeCLick}
-                type="button"></button> 
-                
-                 <button 
-                aria-label='Delete card'
-                type="button" 
-                className={cardDeleteButtonClassName}
-                onClick={handleCardDelete}
-                ></button>*/

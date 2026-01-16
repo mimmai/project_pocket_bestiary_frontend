@@ -1,0 +1,24 @@
+
+
+.form__login .form__title {
+  margin-bottom: 30px; 
+}
+
+.form__login .form__input {
+  margin-bottom: 16px; 
+}
+
+.form__login .form__button {
+  margin-top: 10px; 
+}
+
+
+@media screen and (min-width: 700px) {
+  .form__login .form__title {
+    margin-bottom: 34px;
+  }
+
+  .form__login .form__button {
+    margin-top: 14px;
+  }
+}

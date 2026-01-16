@@ -1,3 +1,7 @@
+import './ProfilePopup.css'
+import '../../../Form/Form.css'
+import '../LoginPopup/Loginpopup.css'
+
 export default function ProfilePopup({ onUpdateUser }) {
 function handleSubmit(e) {
     e.preventDefault();

@@ -1,3 +1,6 @@
+import './ImagePopup.css'
+import '../../Form/Form.css'
+
 export default function ImagePopup({ card }) {
 
     return (

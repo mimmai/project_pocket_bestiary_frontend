@@ -1,0 +1,35 @@
+/* Imagen grande del popup */
+
+.popup__full-size-image {
+  max-width: 75vw;
+  width: 300px;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+
+/* Título flotante */
+
+.popup__title-view-image {
+  color: #EAFBFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  position: absolute;
+  left: 20px;
+  text-shadow: 0 0 10px rgba(242, 5, 203, 0.25);
+}
+
+/* Desktop */
+
+@media screen and (min-width: 700px) {
+  .popup__full-size-image {
+    width: min(90vw, 720px);
+    height: min(70vh, 720px);
+    image-rendering: auto;
+    transform: translateZ(0); 
+  }
+}

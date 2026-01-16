@@ -1,4 +1,5 @@
-
+import './LoginPopup.css'
+import '../../../Form/Form.css'
 
 export default function LoginPopup({ onLogin }) {
   function handleSubmit(e) {
