@@ -7,7 +7,9 @@ export default function Card({
     onCardDelete, 
     onImageClick, 
     onDetailsClick,
-    onPokeballClick, } ) {
+    onPokeballClick,
+    isTeam,
+    onRemove } ) {
 
         console.log("✅ Card.jsx correcto renderizado");
     const { name, link } = card;
@@ -53,6 +55,15 @@ export default function Card({
 
     return (
     <article className="card">
+        {isTeam && (
+        <button
+        type="button"
+        className="card__remove"
+        onClick={() => onRemove(card)}
+        aria-label="Quitar del team"
+    />
+    )}
+
         <img
         className="card__image"
         src={link}

@@ -457,6 +457,47 @@ box-shadow: 0 0 18px rgba(242, 5, 203, 0.12);
 }
 
 
+.card__remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+
+  width: 24px;
+  height: 24px;
+
+  background-color: transparent;
+  background-image: url("/Icon/Trash.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* hover */
+.card__remove:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 14px rgba(242, 5, 203, 0.45),
+    0 0 26px rgba(242, 5, 203, 0.25);
+}
+
+/* active */
+.card__remove:active {
+  transform: scale(0.95);
+}
+
+/* accesibilidad */
+.card__remove:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(255, 228, 75, 0.6),
+    0 0 18px rgba(242, 5, 203, 0.35);
+}
+
 @media screen and (min-width: 700px) {
   .cards {
     margin-top: 16px;

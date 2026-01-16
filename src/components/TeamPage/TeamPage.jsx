@@ -5,6 +5,7 @@ import ImagePopup from "../Forms/ImagePopup/ImagePopup";
 import DetailPopup from "../Main/components/DetailPopup/DetailPopup";
 import Preloader from "../Preloader/Preloader";
 import { getEvolutionChainLinear3 } from "../../utils/PokeApi";
+import ConfirmationPopup from "../Main/components/ConfirmationPopup/ConfirmationPopup";
 
 const SLOTS = Array.from({ length: 6 }, (_, i) => i + 1);
 
@@ -14,7 +15,8 @@ export default function TeamPage({
     onOpenProfilePopup, 
     trainer, 
     team, 
-    onOpenPopup }) {
+    onOpenPopup,
+    onRemoveFromTeam, }) {
 
     //mock temporal borrar despues de conectar la api
     const avatarStyle = avatarUrl ? { "--trainer-avatar": `url("${avatarUrl}")` } : undefined;
@@ -48,6 +50,24 @@ export default function TeamPage({
         title: `Evolución: ${card.name}`,
         children: <DetailPopup chain={[]} />,
         });
+    });
+}
+
+function handleRemoveFromTeam(card) {
+    onOpenPopup({
+    title: "Quitar Pokémon",
+    children: ({ onClose }) => (
+        <ConfirmationPopup
+        title="Quitar Pokémon"
+        message={`¿Deseas quitar a ${card.name} del team?`}
+        confirmText="Quitar"
+        onConfirm={() => {
+            onRemoveFromTeam(card);
+            onClose();
+        }}
+        onClose={onClose}
+        />
+    ),
     });
 }
     
@@ -119,6 +139,8 @@ export default function TeamPage({
             onCardLike={() => {}}
             onCardDelete={() => {}}
             onPokeballClick={() => {}}
+            isTeam={true}
+            onRemove={handleRemoveFromTeam}
         />
         </li>
             );
